@@ -1,4 +1,4 @@
-let sp = [];
+let sp = []; //lista de partículas
 
 function setup() {
   angleMode(DEGREES);
@@ -6,12 +6,20 @@ function setup() {
 }
 
 function draw() {
-  background(120, 10);
-  for (const elemento of sp) {
-    elemento.update();
-    elemento.display();
+  background(0, 60, 100, 50);
+  for (const [index, particula] of sp.entries()) {
+    particula.update();
+    particula.display();
+    if (particula.estaMuerta) {
+      sp.splice(index, 1);
+      console.log("n Partículas: " + sp.length);
+    }
   }
+
+  let np = new Particula(mouseX, mouseY);
+  sp.push(np);
 }
+
 function mouseClicked() {
   let np = new Particula(mouseX, mouseY);
   sp.push(np);
