@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-  background(12, 34, 65, 10);
+  background(12, 34, 65,10);
 
    // Fondo de estrellas titilando
     for (let e of estrellas) {

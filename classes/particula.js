@@ -32,7 +32,7 @@ class Particula {
       let nx = noise(this.t);//Desplazamiento en X para variar el ruido
       let ny = noise(this.t + 1000); //Desplazamiento en Y para variar el ruido
 
-      let movX = map(nx, 0, 1, -5, 5); //Para la ondulación horizontal, a mas alto el valor, mayor desplazamiento
+      let movX = map(nx, 0, 1, -5, 10); //Para la ondulación horizontal, a mas alto el valor, mayor desplazamiento
       let movY = map(ny, 0, 1, -5, 10); 
 
       this.pos.x += movX;
